@@ -22,17 +22,17 @@ jobs:
           pip install playwright
           playwright install chromium
 
-      - name: Check in 2SD
-        run: python check_in.py 2SD || true
-
-      - name: Check in S9M
-        run: python check_in.py S9M || true
-
-      - name: Check in 6XT
+      - name: Check in 1
         run: python check_in.py 6XT || true
 
-      - name: Check in F2P
+      - name: Check in 2
+        run: python check_in.py J74 || true
+
+      - name: Check in 3
+        run: python check_in.py D3A || true
+
+      - name: Check in 4
         run: python check_in.py F2P || true
 
-      - name: Check in 4NY9
-        run: python check_in.py 4NY9 || true
+      - name: Check in 5
+        run: python check_in.py Y2L || true
