@@ -1,10 +1,9 @@
-name: "Library Check-In (Every 5 Minutes)"
+name: "Library Check-In (Hourly :00 & :50)"
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # runs at minute 0,5,10,15,... every hour
-  # optional: let you run it manually in the Actions tab
-  workflow_dispatch:
+    - cron: "0,50 * * * *"  # runs at minute 0 and 50 of every hour
+  workflow_dispatch:         # optional manual trigger
 
 jobs:
   checkin_job:
@@ -24,7 +23,7 @@ jobs:
           playwright install chromium
 
       - name: Check in 2SD
-        run: python check_in.py 2SD || true  # "|| true" ensures we don't fail the job if there's an error
+        run: python check_in.py 2SD || true
 
       - name: Check in 59M
         run: python check_in.py 59M || true
