@@ -25,8 +25,8 @@ jobs:
       - name: Check in 2SD
         run: python check_in.py 2SD || true
 
-      - name: Check in 59M
-        run: python check_in.py 59M || true
+      - name: Check in S9M
+        run: python check_in.py S9M || true
 
       - name: Check in 6XT
         run: python check_in.py 6XT || true
