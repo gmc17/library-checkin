@@ -2,7 +2,7 @@ name: "Library Check-In (Every 5 Minutes)"
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # runs at minute 0,5,10,15,... every hour
+    - cron: "*/10 * * * *"   # runs at minute 0,5,10,15,... every hour
   # optional: let you run it manually in the Actions tab
   workflow_dispatch:
 
