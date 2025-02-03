@@ -19,7 +19,7 @@ def do_check_in(check_in_code):
 
         # Optional short pause so the click has time to fire
         # Remove or adjust if you truly want zero waiting.
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1000)
 
         browser.close()
 
