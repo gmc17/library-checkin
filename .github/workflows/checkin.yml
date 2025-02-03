@@ -14,28 +14,28 @@ on:
 jobs:
   checkin_job:
     runs-on: ubuntu-latest
-
     steps:
-      # 1) Check out your repository code
       - name: Check out code
         uses: actions/checkout@v3
 
-      # 2) Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      # 3) Install dependencies
       - name: Install dependencies
         run: |
           pip install playwright
           playwright install chromium
 
-      # 4) Run the check_in.py script with the code argument
-      - name: Run check in
-        run: |
-          python check_in.py 2SD
-          python check_in.py 59M
-          python check_in.py 6XT
-          python check_in.py F2P
+      - name: Check in 2SD
+        run: python check_in.py 2SD
+
+      - name: Check in 59M
+        run: python check_in.py 59M
+
+      - name: Check in 6XT
+        run: python check_in.py 6XT
+        
+      - name: Check in F2P
+        run: python check_in.py F2P
