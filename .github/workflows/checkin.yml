@@ -23,18 +23,17 @@ jobs:
           pip install playwright
           playwright install chromium
 
-      # 1. Check in 2SD
       - name: Check in 2SD
         run: python check_in.py 2SD || true  # "|| true" ensures we don't fail the job if there's an error
 
-      # 2. Check in 59M
       - name: Check in 59M
         run: python check_in.py 59M || true
 
-      # 3. Check in 6XT
       - name: Check in 6XT
         run: python check_in.py 6XT || true
 
-      # 4. Check in F2P
       - name: Check in F2P
         run: python check_in.py F2P || true
+
+      - name: Check in 4NY9
+        run: python check_in.py 4NY9 || true
