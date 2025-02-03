@@ -2,13 +2,11 @@ name: "Library Check-In"
 
 on:
   schedule:
-    - cron: "0 15 * * *"  # 15:00 UTC -> 9:00am CST
-    - cron: "0 18 * * *"  # 18:00 UTC -> 12:00pm CST
-    - cron: "0 21 * * *"  # 21:00 UTC -> 3:00pm CST
-    - cron: "0 0 * * *"   #  0:00 UTC -> 6:00pm CST
-    - cron: "0 3 * * *"   # 21:00 UTC -> 9:00pm CST
-
-  # (Optional) allow manual run via GitHub UI
+    - cron: "0 15 * * *"  # 15:00 UTC -> 9:00 AM CST
+    - cron: "0 18 * * *"  # 18:00 UTC -> 12:00 PM CST
+    - cron: "0 21 * * *"  # 21:00 UTC -> 3:00 PM CST
+    - cron: "0 0 * * *"   # 00:00 UTC -> 6:00 PM CST
+    - cron: "0 3 * * *"   # 03:00 UTC -> 9:00 PM CST
   workflow_dispatch:
 
 jobs:
@@ -28,14 +26,5 @@ jobs:
           pip install playwright
           playwright install chromium
 
-      - name: Check in 2SD
-        run: python check_in.py 2SD
-
-      - name: Check in 59M
-        run: python check_in.py 59M
-
-      - name: Check in 6XT
-        run: python check_in.py 6XT
-        
-      - name: Check in F2P
-        run: python check_in.py F2P
+      - name: Run check_in.py (time-based)
+        run: python time_based_checkin.py
