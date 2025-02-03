@@ -2,7 +2,7 @@ name: "Library Check-In (Hourly :00 & :50)"
 
 on:
   schedule:
-    - cron: "0,50 * * * *"  # runs at minute 0 and 50 of every hour
+    - cron: "25,55 * * * *"  # runs at minute 0 and 50 of every hour
   workflow_dispatch:         # optional manual trigger
 
 jobs:
