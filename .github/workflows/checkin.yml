@@ -2,10 +2,11 @@ name: "Library Check-In"
 
 on:
   schedule:
-    # This cron syntax is UTC-based. 
-    # Example: run at 14:00 UTC every day (which might be 8:00 AM Chicago Time CST-6 if DST not in effect).
-    # Adjust to fit your needed times (and note Daylight Savings variations).
-    - cron: "0 14 * * *"
+    - cron: "0 15 * * *"  # 15:00 UTC -> 9:00am CST
+    - cron: "0 18 * * *"  # 18:00 UTC -> 12:00pm CST
+    - cron: "0 21 * * *"  # 21:00 UTC -> 3:00pm CST
+    - cron: "0 0 * * *"   #  0:00 UTC -> 6:00pm CST
+    - cron: "0 3 * * *"   # 21:00 UTC -> 9:00pm CST
 
   # (Optional) allow manual run via GitHub UI
   workflow_dispatch:
@@ -35,3 +36,6 @@ jobs:
       - name: Run check in
         run: |
           python check_in.py 2SD
+          python check_in.py 59M
+          python check_in.py 6XT
+          python check_in.py F2P
