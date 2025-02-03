@@ -1,4 +1,4 @@
-name: "Library Check-In (Hourly :00 & :50)"
+name: "Library Check-In (Hourly :25 & :55)"
 
 on:
   schedule:
