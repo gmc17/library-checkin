@@ -23,7 +23,7 @@ jobs:
           playwright install chromium
 
       - name: Check in 1
-        run: python check_in.py 6XT || true
+        run: python check_in.py E9TS || true
 
       - name: Check in 2
         run: python check_in.py J74 || true
